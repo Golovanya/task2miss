@@ -1,9 +1,9 @@
 const plain = () => null;
 
 export const getServerSideProps = async ({ res }) => {
-  res.setHeader('Content-Type', 'text/plain');
-  res.setHeader('author', 'admin');
-  res.end('function task(x) {return x* this.x**2} ');
+  res.setHeader('Content-Type', 'text/plain; charset=UTF-8');
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.end('\nfunction task(x) {\nreturn x* this.x**2\n} ');
   return { props: {} };
 }
 
